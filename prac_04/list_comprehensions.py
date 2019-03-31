@@ -30,17 +30,15 @@ print(full_initials)
 a_names = [name for name in names if name.startswith('A')]
 print(a_names)
 
-
-
-#1
+# 1
 lowercase_full_names = [name.lower for name in full_names]
 print(lowercase_full_names)
 
-#2
+# 2
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 numbers = [int(almost_numbers) for almost_numbers in almost_numbers]
 print(numbers)
 
-#3
+# 3
 greater_than_nine = [numbers for numbers in numbers if numbers > 9]
 print(greater_than_nine)
