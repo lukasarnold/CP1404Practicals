@@ -7,6 +7,9 @@ names = ["Bob", "Angel", "Jimi", "Alan", "Ada"]
 full_names = ["Bob Martin", "Angel Harlem", "Jimi Hendrix", "Alan Turing",
               "Ada Lovelace"]
 
+print(names)
+print(full_names)
+
 # for loop that creates a new list containing the first letter of each name
 first_initials = []
 for name in names:
@@ -27,14 +30,17 @@ print(full_initials)
 a_names = [name for name in names if name.startswith('A')]
 print(a_names)
 
-# TODO: use a list comprehension to create a list of all of the full_names
-# in lowercase format
-# lowercase_full_names =
 
+
+#1
+lowercase_full_names = [name.lower for name in full_names]
+print(lowercase_full_names)
+
+#2
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
-# TODO: use a list comprehension to create a list of integers
-# from the above list of strings
-# numbers =
+numbers = [int(almost_numbers) for almost_numbers in almost_numbers]
+print(numbers)
 
-# TODO: use a list comprehension to create a list of only the numbers that are
-# greater than 9 from the numbers (not strings) you just created
+#3
+greater_than_nine = [numbers for numbers in numbers if numbers > 9]
+print(greater_than_nine)
