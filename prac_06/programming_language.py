@@ -8,9 +8,9 @@ class ProgrammingLanguage:
         """Initialise the Programming Language Instance
 
         language: string, name of programming language
-        typing: string,
-        reflection: boolean,
-        year: integer,
+        typing: string, either static or dynamic
+        reflection: boolean, reflection
+        year: integer, year of appearance
         """
 
         self.language = language
