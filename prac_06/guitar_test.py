@@ -7,8 +7,10 @@ from prac_06.guitar import Guitar
 def main():
     """Code to see how class Guitar works"""
 
-    gibson = Guitar("Gibson L-5 CES,1922,16035.40")
+    gibson = Guitar("Gibson L-5 CES", 1922, 16035.40)
+    another_guitar = Guitar("Another Guitar", 2012, 1000)
 
     print(gibson)
+    print(another_guitar)
 
-main()
+    main()

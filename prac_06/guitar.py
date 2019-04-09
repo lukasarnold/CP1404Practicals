@@ -18,15 +18,17 @@ class Guitar:
 
     def __str__(self):
         """Return the representation of the guitar object"""
-        return "{}, {}, {}".format(self.name, self.year, self.cost)
+        return "{} ({}) : {}".format(self.name, self.year, self.cost)
 
     def get_age(self):
         """Calculates age based off the year it was made"""
         age = 2019 - self.year
+        return age
 
-    def is_vintage(self):
+    def is_vintage(self, age):
         """Determines if vintage based on age condition"""
-        if get_age(self) >= 50:
+        if age >= 50:
             is_vintage = True
         else:
             is_vintage = False
+        return is_vintage
