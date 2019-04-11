@@ -19,13 +19,15 @@ class ProgrammingLanguage:
         self.year = year
 
     def __str__(self):
+        """..."""
         """Return the representation of the programming language object"""
         return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.language, self.typing,
-                                                                             self.reflection, self.year)
+                                                                           self.reflection, self.year)
 
     def is_dynamic(self):
-        if self == "Java" or "C++" or "Visual Basic":
-            is_dynamic = False
-        elif self == "Python" or "Ruby":
+        """..."""
+        if self.typing == "Dynamic":
             is_dynamic = True
-        print("Is programming language is dynamic: {}".format(self.is_dynamic()))
+        elif self.typing == "Static":
+            is_dynamic = False
+        return is_dynamic

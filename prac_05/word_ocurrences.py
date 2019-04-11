@@ -26,7 +26,7 @@ for i in range(len(words)):
     for j in range(len(words)):
         if words[i] == words[j]:
             occurrences += 1
-    words_and_occurrences['{}'.format(words[i])] = occurrences
+    words_and_occurrences[words[i]] = occurrences
 
 # Print output
 print("Text: {}".format(string))

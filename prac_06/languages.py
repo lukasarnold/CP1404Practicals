@@ -13,11 +13,20 @@ def main():
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
     ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
 
+    # Print python objects
     print(java)
     print(c_plus_plus)
     print(ruby)
     print(python)
     print(visual_basic)
+
+    # Create list of ProgrammingLanguage objects
+    programming_languages = [java, c_plus_plus, ruby, python, visual_basic]
+
+    # Print all with dynamic typing
+    print("The dynamically typed languages are:")
+    dynamic_languages = [language for language in programming_languages if language.is_dynamic()]
+    print(repr(dynamic_languages))
 
 
 main()
