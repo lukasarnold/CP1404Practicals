@@ -1,5 +1,8 @@
 """CP1404/CP5632 Practical - Programming Language."""
 
+CURRENT_YEAR = 2019
+AGE_FOR_VINTAGE = 50
+
 
 class Guitar:
     """Represent a guitar object."""
@@ -17,18 +20,14 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        """Return the representation of the guitar object"""
+        """Return the representation of the guitar object."""
         return "{} ({}) : {}".format(self.name, self.year, self.cost)
 
     def get_age(self):
-        """Calculates age based off the year it was made"""
-        age = 2019 - self.year
+        """Calculates age based off the year it was made."""
+        age = CURRENT_YEAR - self.year
         return age
 
     def is_vintage(self):
-        """Determines if vintage based on age condition"""
-        if age >= 50:
-            is_vintage = True
-        else:
-            is_vintage = False
-        return is_vintage
+        """Determines if vintage based on age."""
+        return self.get_age() >= AGE_FOR_VINTAGE
