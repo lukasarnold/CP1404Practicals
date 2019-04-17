@@ -24,9 +24,11 @@ def main():
     programming_languages = [java, c_plus_plus, ruby, python, visual_basic]
 
     # Print all with dynamic typing
-    print("The dynamically typed languages are:")
-    dynamic_languages = [language for language in programming_languages if language.is_dynamic()]
-    print(repr(dynamic_languages))
+    print("\nThe dynamically typed languages are:")
+    dynamic_languages = [language.language for language in programming_languages if language.is_dynamic()]
+
+    for language in range(len(dynamic_languages)):
+        print(dynamic_languages[language])
 
 
 main()
