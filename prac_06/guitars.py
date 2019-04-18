@@ -11,7 +11,7 @@ def main():
     guitars = []
 
     # Print welcome message
-    print("My Guitars!")
+    print("My Guitars!\n")
 
     # Ask for inputs and call class then store in list
     name = input("Name:")
@@ -21,7 +21,7 @@ def main():
 
         new_guitar = Guitar(name, year, cost)
         guitars.append(new_guitar)
-        print("{} added".format(new_guitar))
+        print("{} ({}) : ${:.2f} added.\n".format(name, year, cost))
 
         name = input("Name:")
 
@@ -30,19 +30,19 @@ def main():
     guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
 
     # Print the guitars you own
-    print("These are my Guitars:")
+    print("\nThese are my Guitars:")
     for guitar in range(len(guitars)):
-
         name = guitars[guitar].name
         year = guitars[guitar].year
         cost = guitars[guitar].cost
 
-        vintage_status = ""
-        if guitar.is_vintage():
-            vintage_status = "(vintage)"
+        # vintage_status = ""
+        # if guitars[guitar].is_vintage():
+        #     vintage_status = "(vintage)"
 
-        print("Guitar {}: {} ({}), worth ${} {}".format(guitar + 1, name, year, cost, vintage_status)
+        vintage_status = "(vintage)" if guitars[guitar].is_vintage() else ""
 
+        print("Guitar {}: {} ({}), worth ${:.2f} {}".format(guitar + 1, name, year, cost, vintage_status))
 
 
 main()
