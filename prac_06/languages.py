@@ -25,10 +25,10 @@ def main():
 
     # Print all with dynamic typing
     print("\nThe dynamically typed languages are:")
-    dynamic_languages = [language.language for language in programming_languages if language.is_dynamic()]
+    dynamic_languages = [language.name for language in programming_languages if language.is_dynamic()]
 
-    for language in range(len(dynamic_languages)):
-        print(dynamic_languages[language])
+    for language in dynamic_languages:
+        print(language)
 
 
 main()

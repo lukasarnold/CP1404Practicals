@@ -13,7 +13,7 @@ class ProgrammingLanguage:
         year: integer, year of appearance
         """
 
-        self.language = language
+        self.name = language
         self.typing = typing
         self.reflection = reflection
         self.year = year
@@ -21,13 +21,9 @@ class ProgrammingLanguage:
     def __str__(self):
         """..."""
         """Return the representation of the programming language object"""
-        return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.language, self.typing,
+        return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.name, self.typing,
                                                                            self.reflection, self.year)
 
     def is_dynamic(self):
         """..."""
-        if self.typing == "Dynamic":
-            is_dynamic = True
-        elif self.typing == "Static":
-            is_dynamic = False
-        return is_dynamic
+        return self.typing == "Dynamic"

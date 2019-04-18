@@ -13,7 +13,7 @@ def main():
     # Print welcome message
     print("My Guitars!\n")
 
-    # Ask for inputs and call class then store in list
+    # Ask for inputs and create objects then store in list
     name = input("Name:")
     while name != "":
         year = int(input("Year:"))
@@ -31,18 +31,14 @@ def main():
 
     # Print the guitars you own
     print("\nThese are my Guitars:")
-    for guitar in range(len(guitars)):
-        name = guitars[guitar].name
-        year = guitars[guitar].year
-        cost = guitars[guitar].cost
+    for i in range(len(guitars)):
+        name = guitars[i].name
+        year = guitars[i].year
+        cost = guitars[i].cost
 
-        # vintage_status = ""
-        # if guitars[guitar].is_vintage():
-        #     vintage_status = "(vintage)"
+        vintage_status = "(vintage)" if guitars[i].is_vintage() else ""
 
-        vintage_status = "(vintage)" if guitars[guitar].is_vintage() else ""
-
-        print("Guitar {}: {} ({}), worth ${:.2f} {}".format(guitar + 1, name, year, cost, vintage_status))
+        print("Guitar {}: {} ({}), worth ${:.2f} {}".format(i + 1, name, year, cost, vintage_status))
 
 
 main()

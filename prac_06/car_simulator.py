@@ -18,8 +18,7 @@ def main():
     choice = input("Enter your choice: ").lower()
     while choice != "q":
         if choice == "d":
-            distance_to_drive = int(
-                input("How many km do you wish to drive? "))
+            distance_to_drive = int(input("How many km do you wish to drive? "))
             while distance_to_drive < 0:
                 print("Distance must be >= 0")
                 distance_to_drive = int(
