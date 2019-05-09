@@ -1,0 +1,28 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        TextInput:
+            id: input_number
+            text: '34'
+            font_size: 48
+            multiline: False
+
+        BoxLayout:
+            orientation: 'vertical'
+
+        Label:
+            text: 'Up'
+
+        Label:
+            text: 'Down'
+
+    Label:
+        text: 'Convert miles to kilometres'
+
+    Label:
+        id: output_label
+        font_size: 48
+        color: (1.0, 0.75, 0.8, 1.0)
