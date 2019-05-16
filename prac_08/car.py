@@ -1,4 +1,7 @@
-"""CP1404/CP5632 Practical - Car class example."""
+"""
+Car class
+Lukas Arnold
+"""
 
 
 class Car:
