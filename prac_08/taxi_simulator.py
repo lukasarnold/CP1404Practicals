@@ -21,6 +21,7 @@ def main():
     print("Let's drive!")
     print(MENU)
     menu_choice = input(">>> ").lower()
+
     while menu_choice != "q":
         if menu_choice == "c":
             print("Taxis available: ")
