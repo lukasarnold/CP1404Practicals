@@ -1,19 +1,17 @@
 """
-CP1404/CP5632 Practical
-Demos of various os module examples
+Cleanup files code
+Lukas Arnold
 """
+
 import shutil
 import os
 
 
 def main():
-    """Demo os module functions."""
+    """ """
+
     print("Starting directory is: {}".format(os.getcwd()))
-
-    # Change to desired directory
     os.chdir('Lyrics/Christmas')
-
-    # Print a list of all files in current directory
     print("Files in {}:\n{}\n".format(os.getcwd(), os.listdir('.')))
 
     # Make a new directory but pass if the directory exists
@@ -37,24 +35,10 @@ def main():
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
+    for word in words
+    new_name =
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
     return new_name
 
 
-def demo_walk():
-    """Process all subdirectories using os.walk()."""
-    os.chdir('Lyrics')
-    for directory_name, subdirectories, filenames in os.walk('.'):
-        print("Directory:", directory_name)
-        print("\tcontains subdirectories:", subdirectories)
-        print("\tand files:", filenames)
-        print("(Current working directory is: {})".format(os.getcwd()))
-
-        for filename in filenames:
-            full_name = os.path.join(directory_name, filename)
-            new_name = os.path.join(directory_name, get_fixed_filename(filename))
-            os.rename(full_name, new_name)
-
-
 main()
-# demo_walk()
