@@ -33,12 +33,12 @@ def main():
         shutil.move(filename, 'temp/' + new_name)
 
 
-def get_fixed_filename(filename):
-    """Return a 'fixed' version of filename."""
-    for word in words
-    new_name =
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    return new_name
+# def get_fixed_filename(filename):
+#     """Return a 'fixed' version of filename."""
+#     for word in words
+#     new_name = " "
+#     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+#     return new_name
 
 
 main()
