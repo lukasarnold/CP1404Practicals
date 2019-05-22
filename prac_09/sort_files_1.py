@@ -21,7 +21,6 @@ def main():
         split_files = file.split('.')
         all_extensions.append(split_files[1])
     all_extensions.sort()
-    print(all_extensions)
 
     # Delete repeating file extensions
     extensions = []
@@ -30,7 +29,18 @@ def main():
         if extension not in extensions:
             extensions.append(extension)
 
-    print(extensions)
+    # Make directories from extensions if it doesnt exist
+    try:
+        for extension in extensions:
+            os.mkdir(extension)
+    except FileExistsError:
+        pass
+
+    # Move files to directories
+    for i in range(len(files)):
+        for j in range(len(extensions)):
+            if files[i][-3:] == extensions[j][-3:]:
+                shutil.move(files[i], extensions[j])
 
 
 main()
